@@ -94,6 +94,12 @@
                   
                 </li>
               
+                <li>
+                  <a href='#Inline-Editing'>Inline Editing</a>
+
+                  
+                </li>
+              
             </ul>
           
         </ul>
@@ -117,6 +123,12 @@
               
                 <li>
                   <a href='#Redefine-Structure-Example'>Redefine Structure Example</a>
+
+                  
+                </li>
+              
+                <li>
+                  <a href='#Custom-Theme'>Custom Theme</a>
 
                   
                 </li>
@@ -337,6 +349,7 @@
 <li>As a function that returns a promise-like object. You can do a request to server as you wish</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  treeOptions: &#123;</span><br><span class="line">    fetchData(node) &#123;</span><br><span class="line">      <span class="keyword">return</span> fetch(<span class="string">`/assets/data/fetch0/data-<span class="subst">$&#123;node.id&#125;</span>.json`</span>)</span><br><span class="line">        .then(<span class="function"><span class="params">r</span> =&gt;</span> r.json())</span><br><span class="line">        .catch(<span class="function"><span class="params">e</span> =&gt;</span> <span class="built_in">console</span>.log(e))</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// or</span></span><br><span class="line">    fetchData(node) &#123;</span><br><span class="line">      <span class="keyword">return</span> axios.get(<span class="string">'/user'</span>, &#123;</span><br><span class="line">        params: &#123;</span><br><span class="line">          ID: node.id</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Inline-Editing"><a href="#Inline-Editing" class="headerlink" title="Inline Editing"></a>Inline Editing</h3><p>In progress…</p>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="JSON-Viewer"><a href="#JSON-Viewer" class="headerlink" title="JSON Viewer"></a>JSON Viewer</h3><p>I did this in 40 min … do not judge me strictly :)<br>In plans:</p>
 <ul>
 <li>online editor</li>
@@ -352,6 +365,10 @@
 <p>In this example we have structure:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  MY_TEXT: <span class="string">'some text'</span>, <span class="attr">KIDS</span>: []</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 <p>A library doesn’t know this format. But we can add <code>propertyNames</code> options and redefine structure. See example</p>
 <iframe width="100%" height="500" src="//jsfiddle.net/amsik/y7190jkd/embedded/html,result/dark/" allowpaymentrequest="" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+<h3 id="Custom-Theme"><a href="#Custom-Theme" class="headerlink" title="Custom Theme"></a>Custom Theme</h3><p>This example shows how to use tree in real life</p>
+<iframe width="100%" height="500" src="//jsfiddle.net/amsik/qka5pxdm/embedded/js,html,css,result/dark/" allowpaymentrequest="" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><h3 id="Tree-API"><a href="#Tree-API" class="headerlink" title="Tree API"></a>Tree API</h3><p>To have directly access to the Tree API you have to use <code>ref</code> property of component. See more <a href="https://vuejs.org/v2/guide/components.html#Child-Component-Refs" target="_blank" rel="noopener">Child-Component-Refs</a>.</p>
@@ -585,8 +602,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>In progress…</p>
-
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>This example shows every possible events for the tree.</p>
+<iframe width="100%" height="500" src="//jsfiddle.net/amsik/cuseo1j7/embedded/js,html,css,result/dark/" allowpaymentrequest="" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
     </div>
   </div>
 </body>
